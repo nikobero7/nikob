@@ -1,0 +1,21 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let items of bookedData">
+        <th>{{items.id}}</th>
+        <td>{{items.checkInDate}}</td>
+        <td>{{items.checkOutDate}}</td>
+        <td>{{items.totalPrice}}</td>
+        <td (click)="deleteRoom(items.id)">X</td>
+      </tr>
+      
+    </tbody>
+  </table>
